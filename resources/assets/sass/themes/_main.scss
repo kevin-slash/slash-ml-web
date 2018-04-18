@@ -1,0 +1,21 @@
+@import "sovann";
+@import "chay";
+html{
+	font-size: 16px;
+	@include mediaQuery(767px){
+		font-size: 14px;
+	}
+}  
+
+body{
+    font-family: 'Open Sans', sans-serif;
+	// font-weight: 300;
+    // letter-spacing: 0.2px;
+    line-height: 26px;
+	// overflow-x: hidden;
+}
+
+
+@import "imports/header"; 
+@import "imports/footer"; 
+

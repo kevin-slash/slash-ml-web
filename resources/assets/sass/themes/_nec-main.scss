@@ -1,0 +1,310 @@
+$necMainColor: #5a8200; //#30ad30;
+$necTxtColor: white;
+$necTxtGrayColor: gray;
+$necTxtLightGrayColor: #eee;
+$necTxtLightBlackColor: #333;
+// General
+
+body {
+	.btn-primary
+	{
+		background-color: $necMainColor;
+		border-color: $necMainColor;
+		color: white;
+		
+	    &:focus, &:active, &:hover, &:active:hover{
+
+	    	background-color: lighten($necMainColor, 10);
+	    	border-color: lighten($necMainColor, 10);
+	    	color: darken(#505050, 5);
+	    }
+	}
+	.btn-default{
+		border-radius: 0px;
+		background-color: $necTxtLightGrayColor;
+		border-color: $necTxtLightGrayColor;
+		color: $necTxtLightBlackColor;
+		
+	    &:focus, &:active, &:hover, &:active:hover{
+
+	    	background-color: lighten($necTxtLightGrayColor, 4);
+	    	border-color: lighten($necTxtLightGrayColor, 4);
+	    	color: darken($necTxtLightBlackColor, 5);
+	    }
+	}
+	.btn-min-100{
+		min-width: 100px;
+	}
+	.btn-sm{
+
+	}
+
+			.flex-box{
+				display: flex;
+				align-content: center;
+				min-height: 270px;
+				align-items: center;
+			}
+}
+
+// Custom pagination
+
+.page-link{
+	
+	color: $necMainColor;
+
+	&:hover, &:focus {
+	    
+	    background-color: darken($necMainColor, 5);
+		border-color: darken($necMainColor, 5);
+		color: white;
+	}
+}
+
+.page-item{
+	cursor: pointer;
+}
+.page-item.active{
+ 
+
+	.page-link{
+    
+	    background-color: darken($necMainColor, 5);
+		border-color: darken($necMainColor, 5);
+
+		&:hover,&:focus {
+		    
+		    background-color: darken($necMainColor, 0);
+			border-color: darken($necMainColor, 0);
+			color: white;
+		}
+  
+	}	
+}
+.pagination .page-link, .pagination-sm .page-link{
+
+	border-radius: 0px !important;
+}
+
+
+// Member module
+
+.member-listing{
+	.member-listing-title, .member-listing-filter .title{
+
+		padding: 15px;
+	    background-color: $necMainColor;
+	    color: $necTxtColor;
+
+	}
+
+	.member-listing-filter{
+		border: 1px solid $necMainColor;
+		form{
+			padding: 15px;
+			> .row{
+				margin-bottom: 15px;
+			}
+			.form-group label{
+				padding: 7px 0px;
+				font-size: 14px;
+			}
+			.form-group .form-control, .form-group select{
+				border-radius: 0px;
+				font-size: 14px;
+			}
+			.form-group select{
+				 -webkit-appearance: none;
+			    -webkit-border-radius: 0px;
+			    background: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='24' height='24' viewBox='0 0 24 24'><path fill='#444' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'></path></svg>");
+			    background-position: 100% 50%;
+			    background-repeat: no-repeat;
+			}
+		}
+	}
+	.member-listing-table{
+		margin-top: 15px;
+		table{
+			tbody{
+				border: 0px;
+				
+			}
+			thead{
+				border: 0px;
+				th{
+					border: 0px;
+				}
+
+			}
+			th{
+				font-style: italic;
+			}
+			td{
+				font-size: 14px;
+			}
+			tr:nth-child(odd){
+				td{
+					background-color: #eee;
+
+				}
+			}
+		}
+	}
+	.document-listing-table{
+		margin-top: 30px;
+		.document-row{
+			margin-bottom: 25px;
+			.document-frame{
+				border: 1px solid #ddd;
+			}
+			.document-image{
+				background-position: center;
+				background-size: cover;
+				background-repeat: no-repeat;
+				min-height: 300px;
+				border-right: 1px solid #ebebeb;
+			}
+			.document-desc{
+				min-height: 300px;
+				h3{
+					color: $necMainColor;
+				}
+				border-right: 1px solid #ebebeb;
+			}
+			.document-action{
+				padding: 0px 15px;
+
+				.flex-box{
+					min-height: 300px;
+					background-color: #ddd;
+					padding: 10px;
+					> div{
+						 width: 100%;
+					}
+				}
+				.document-download{
+					@extend .text-center;
+					margin-top: 30px;
+					a{
+						margin-left: 5px;
+						margin-right: 5px;
+					}
+					p{
+						color: $necMainColor;
+						font-weight: bold;
+					}
+				}
+				font-size: 12px;
+			}
+		}
+	}
+}
+
+// Member detail
+.member-detail{
+	.panel{
+		.panel-heading{
+			padding: 15px;
+		    background-color: $necMainColor;
+		    color: $necTxtColor;
+		    font-size: 20px;
+		}
+		.panel-body{
+			padding: 30px;
+			border: 1px solid $necMainColor;
+			.member-title{
+				font-style: italic;
+				color: $necMainColor;
+				font-weight: bold;
+				font-size: 20px;
+
+			}
+			.member-appreviation{
+				font-style: italic;
+				color: $necTxtGrayColor;
+				font-size: 18px;
+			}
+			.member-category, .member-address, .member-contact{
+				font-size: 18px;
+				margin-top: 15px;
+			}
+			.data-item{
+				margin-top: 25px;
+				h2{
+					color: $necMainColor;
+					font-size: 24px;
+					font-weight: bold;
+				}
+				p{
+
+					font-size: 14px;
+				}
+				ul.data-staffs{
+					padding-left: 20px;
+					li{
+						&:before{
+							content: '-';
+							display: inline-block;
+							position: absolute;
+							margin-left: -20px;
+						}
+					}
+				}
+				div.data-budgets, div.data-donors{
+					.head{
+						font-weight: bold;
+						margin-bottom: 15px;
+						font-size: 17px;
+					}
+					.item{
+
+					}
+				}
+				div.data-activities{
+					table{
+						tbody{
+							border: 0px;
+							
+						}
+						thead{
+							border: 0px;
+							th{
+								border: 0px;
+							}
+
+						}
+						th{
+							font-style: italic;
+						}
+						td{
+							font-size: 14px;
+						}
+						tr:nth-child(odd){
+							td{
+								background-color: #eee;
+
+							}
+						}
+					}
+				}
+
+			}
+			.data-contact-people{
+				.item, .head{
+					margin-top: 15px;
+					margin-bottom: 15px;
+					font-size: 14px;
+				}
+				.head{
+					.head-label{
+
+					}
+					.head-value{
+						font-weight: bold;
+						color: $necMainColor;
+					}
+				}
+			}
+		}
+	}
+}

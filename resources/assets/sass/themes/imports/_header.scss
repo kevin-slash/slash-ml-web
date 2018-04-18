@@ -1,0 +1,58 @@
+.navbar{
+    background: transparent;
+    position: absolute;
+    padding: 20px 5%;
+    width: 100%;
+    z-index: 999;
+    .navbar-brand{
+        margin-right: 40px;
+    }
+    .navbar-toggler{
+        box-shadow: none;
+        background: #fff;
+        .navbar-togggler-icon{
+            color: white;
+        }
+    }
+    .navbar-collapse{
+        .navbar-nav{
+            .nav-item{
+                margin-right: 15px;
+                a{
+                    color: #fff;
+                    font-size: 20px;
+                    text-transform: uppercase;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                }
+            }
+        }
+        .btn-search{
+            color: white;
+            background: transparent;
+            box-shadow: none;
+            cursor: pointer;
+        }
+        .btn-group{
+            .btn-login{
+                border-radius: 20px !important;
+                cursor: pointer;
+                padding: 0 25px;
+                background: white;
+                a{
+                    color: rgb(71, 108, 124);
+                }
+            }
+            .btn-signup{
+                margin-left: 12px;
+                background: transparent;
+                font-weight: 500;
+                cursor: pointer;
+                a{
+                    color: white;
+                }
+            }
+        }
+    }
+}
