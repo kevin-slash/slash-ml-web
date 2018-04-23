@@ -53,6 +53,9 @@
 			<script type="text/javascript" src="{{ asset('vendors-download/popper/popper.min.js') }}"></script>
 			<script type="text/javascript" src="{{ asset('vendors/bootstrap/dist/js/bootstrap.min.js') }}"></script>
 			<script src="{{asset('vendors/ng-file-upload/ng-file-upload.min.js')}}"></script>
+			<script src="{{asset('vendors/moment/moment.js')}}"></script>
+			<script src="{{asset('vendors/chart.js/dist/Chart.js')}}"></script>
+			<script src="{{asset('vendors/chart.js/dist/Chart.bundle.js')}}"></script>
 
 			<script src="{{asset('vendors/material-angular-paging/build/dist.min.js')}}"></script>
 			<script src="{{asset('vendors/ng-file-upload-shim/ng-file-upload-shim.min.js')}}"></script>

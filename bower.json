@@ -64,7 +64,9 @@
     "eonasdan-bootstrap-datetimepicker": "^4.17.45",
     "salvattore": "^1.0.9",
     "isotope": "^3.0.2",
-    "jQuery-ui-Slider-Pips": "jquery-ui-slider-pips#^1.11.4"
+    "jQuery-ui-Slider-Pips": "jquery-ui-slider-pips#^1.11.4",
+    "chart.js": "^2.7.2",
+    "moment": "^2.22.1"
   },
   "resolutions": {
     "angular": "1.5.6",

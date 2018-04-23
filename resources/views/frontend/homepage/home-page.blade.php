@@ -1,7 +1,7 @@
 @extends('layouts.default')
 @section('content')
-	<div class="p-5 row" ng-controller="OpenSourceCtrl" ng-app="StarterApp">
-		<div class="col-6">
+	<div class="p-4 row" ng-controller="OpenSourceCtrl" ng-app="StarterApp" style="width: 100%;">
+		<div class="col-lg-4">
 			<input type="text" name="fbrowse" >
 			<button ngf-select="uploadFiles($files)" ngf-accept="'image/*'" class="margin-left" require>
 				Browse
@@ -64,11 +64,11 @@
 			</div>
 		</div>
 		
-		<div ng-show="dialog">
+		<div ng-show="dialog" class="col-lg-8">
 			<div class="execute">
 				<label>Predicted result:</label>
 				<div style="padding-top: 10px;">
-					<div class="row" style="width: 40rem;">
+					<div class="row">
 						<div class="column">
 						<table style="width:100%;height: 100%;">
 							<tr>
@@ -88,8 +88,9 @@
 							<th>...%  ...s</th>
 							</tr>
 						</table>
-						<div>
-							<img src=""/>
+						<div class="mt-4">
+							<label for="text">Result for each fold</label>
+							<canvas id="lineChart" style="height: 200px;"></canvas>
 						</div>
 						</div>
 						<div class="column">
@@ -111,8 +112,9 @@
 							<th>...%  ...s</th>
 							</tr>
 						</table>
-						<div>
-							<img src=""/>
+						<div class="mt-4">
+							<label for="text">Average result</label>
+							<canvas id="myChart" style="max-width: 500px;"></canvas>
 						</div>
 						</div>
 					</div>
