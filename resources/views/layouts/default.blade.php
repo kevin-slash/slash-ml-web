@@ -56,6 +56,8 @@
 			<script src="{{asset('vendors/moment/moment.js')}}"></script>
 			<script src="{{asset('vendors/chart.js/dist/Chart.js')}}"></script>
 			<script src="{{asset('vendors/chart.js/dist/Chart.bundle.js')}}"></script>
+			<script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+			<script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
 
 			<script src="{{asset('vendors/material-angular-paging/build/dist.min.js')}}"></script>
 			<script src="{{asset('vendors/ng-file-upload-shim/ng-file-upload-shim.min.js')}}"></script>

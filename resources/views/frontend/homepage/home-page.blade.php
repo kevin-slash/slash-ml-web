@@ -64,58 +64,58 @@
 			</div>
 		</div>
 		
-		<div ng-show="dialog" class="col-lg-8">
+		<div ng-show="dialog" class="col-lg-8" ng-cloak>
 			<div class="execute">
 				<label>Predicted result:</label>
 				<div style="padding-top: 10px;">
 					<div class="row">
 						<div class="column">
-						<table style="width:100%;height: 100%;">
-							<tr>
-							<th>On testing data</th>
-							<th>Time</th>
-							</tr>
-							<tr>
-							<td>Naive Bayes</td>
-							<th>...%  ...s</th>
-							</tr>
-							<tr>
-							<td>Neural Network</td>
-							<th>...%  ...s</th>
-							</tr>
-							<tr>
-							<td>Decision Tree</td>
-							<th>...%  ...s</th>
-							</tr>
-						</table>
-						<div class="mt-4">
-							<label for="text">Result for each fold</label>
-							<canvas id="lineChart" style="height: 200px;"></canvas>
-						</div>
+							<table style="width:100%;height: 100%;">
+								<tr>
+								<th>On testing data</th>
+								<th>Time</th>
+								</tr>
+								<tr>
+								<td>Naive Bayes</td>
+								<th>...%  ...s</th>
+								</tr>
+								<tr>
+								<td>Neural Network</td>
+								<th>...%  ...s</th>
+								</tr>
+								<tr>
+								<td>Decision Tree</td>
+								<th>...%  ...s</th>
+								</tr>
+							</table>
+							<div class="mt-4">
+								<!-- <canvas id="lineChart" style="height: 200px;"></canvas> -->
+								<div id="chartContainer"></div>
+							</div>
 						</div>
 						<div class="column">
-						<table style="width:100%;height: 100%;">
-							<tr>
-							<th>On training data</th>
-							<th>Time</th>
-							</tr>
-							<tr>
-							<td>Naive Bayes</td>
-							<th>...%  ...s</th>
-							</tr>
-							<tr>
-							<td>Neural Network</td>
-							<th>...%  ...s</th>
-							</tr>
-							<tr>
-							<td>Decision Tree</td>
-							<th>...%  ...s</th>
-							</tr>
-						</table>
-						<div class="mt-4">
-							<label for="text">Average result</label>
-							<canvas id="myChart" style="max-width: 500px;"></canvas>
-						</div>
+							<table style="width:100%;height: 100%;">
+								<tr>
+								<th>On training data</th>
+								<th>Time</th>
+								</tr>
+								<tr>
+								<td>Naive Bayes</td>
+								<th>...%  ...s</th>
+								</tr>
+								<tr>
+								<td>Neural Network</td>
+								<th>...%  ...s</th>
+								</tr>
+								<tr>
+								<td>Decision Tree</td>
+								<th>...%  ...s</th>
+								</tr>
+							</table>
+							<div class="mt-4">
+								<!-- <canvas id="myChart" style="max-width: 500px;"></canvas> -->
+								<div id="chartContainerBar"></div>
+							</div>
 						</div>
 					</div>
 				</div>
