@@ -63,6 +63,7 @@
 			<script src="{{asset('vendors/ng-file-upload-shim/ng-file-upload-shim.min.js')}}"></script>
 
 			<script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
+			<script type="text/javascript" src="{{ asset('js/env.js') }}"></script>
 			<script type="text/javascript" src="{{ asset('js/open-source/opensource.js') }}"></script>			
 
 		@else
