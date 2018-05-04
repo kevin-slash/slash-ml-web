@@ -1,95 +1,6 @@
 app.controller('OpenSourceCtrl', function ($rootScope, $scope, Upload) {
 
-    //charts
-    window.onload = function () {
-
-        // var options = {
-        //     animationEnabled: true,
-        //     theme: "light2",
-        //     title: {
-        //         text: "Result foreach fold"
-        //     },
-        //     width: 414,
-        //     height: 300,
-        //     axisX: {
-        //     },
-        //     axisY: {
-        //         minimum: 0.74,
-        //         maximum: 0.9,
-        //         stepSize: 0.02
-        //     },
-        //     toolTip: {
-        //         shared: true
-        //     },
-        //     legend: {
-        //         cursor: "pointer",
-        //         verticalAlign: "bottom",
-        //         horizontalAlign: "left",
-        //         dockInsidePlotArea: true,
-        //         itemclick: toogleDataSeries
-        //     },
-        //     data: [{
-        //         type: "line",
-        //         showInLegend: true,
-        //         name: "serie 1",
-        //         markerType: "square",
-        //         color: "#F08080",
-        //         dataPoints: [
-        //             { x: 1, y: 0.85 },
-        //             { x: 2, y: 0.76 },
-        //             { x: 3, y: 0.88 },
-        //             { x: 4, y: 0.79 },
-        //             { x: 5, y: 0.82 },
-        //         ]
-        //     },
-        //     {
-        //         type: "line",
-        //         showInLegend: true,
-        //         name: "serie 2",
-        //         markerType: "square",
-        //         color: "#1b8ec5",
-        //         dataPoints: [
-        //             { x: 1, y: 0.79 },
-        //             { x: 2, y: 0.89 },
-        //             { x: 3, y: 0.79 },
-        //             { x: 4, y: 0.82 },
-        //             { x: 5, y: 0.85 },
-        //         ]
-        //     }]
-        // };
-        // $("#chartContainer").CanvasJSChart(options);
-
-        // var optionsB = {
-        //     title: {
-        //         text: "Averange results on testing data"
-        //     },
-        //     width: 414,
-        //     height: 300,
-        //     data: [{
-        //         type: "column",
-        //         dataPoints: [{
-        //                 label: "NB",
-        //                 y: $scope.myResult.figure_on_testing_data.NB
-        //             },
-        //             {
-        //                 label: "NN",
-        //                 y: $scope.myResult.figure_on_testing_data.NN
-        //             },
-        //         ]
-        //     }]
-        // };
-
-        // $("#chartContainerBar").CanvasJSChart(optionsB);
-
-        // function toogleDataSeries(e) {
-        //     if (typeof (e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
-        //         e.dataSeries.visible = false;
-        //     } else {
-        //         e.dataSeries.visible = true;
-        //     }
-        //     e.chart.render();
-        // }
-    }
+    
 
     $scope.imageFiles = [];
     $scope.urlImageLogo = '';
@@ -100,31 +11,6 @@ app.controller('OpenSourceCtrl', function ($rootScope, $scope, Upload) {
     }
 
     $scope.ImageFilesUpload = function () {
-        // console.log('upload now', id);
-
-        // var session = genfunc.getSessionId();
-        // var token = genfunc.getToken();
-        // var request_id = genfunc.getRequestId();
-
-        // function getRemote() {
-        //     var remote = $('meta[name="se:remoteUrl"]');
-        //     remote = remote ? remote.attr('content') : '';
-        //     return atob(remote);
-        // }
-        // $scope.urlImageLogo = $scope.getUrlFileImage(files[0]);
-        // console.log($scope.urlImageLogo);
-        // console.log(namespace.domain);
-        // $http({
-        //     method: 'GET',
-        //     url: namespace.domain
-        // }).then(function successCallback(response) {
-        //     // this callback will be called asynchronously
-        //     // when the response is available
-        // }, function errorCallback(response) {
-        //     // called asynchronously if an error occurs
-        //     // or server returns response with an error status.
-        // });
-        // console.log($scope.imageFiles[0]);
         Upload.upload({
             url: namespace.domain + 'getresults',
             method: 'POST',
@@ -147,6 +33,64 @@ app.controller('OpenSourceCtrl', function ($rootScope, $scope, Upload) {
         }).then(function (resp) {
             console.log(resp.data);
             $scope.myResult = resp.data;
+
+            $( ".my-svg" ).addClass( "display-none" );
+
+            // var options = {
+            //     animationEnabled: true,
+            //     theme: "light2",
+            //     title: {
+            //         text: "Result foreach fold"
+            //     },
+            //     width: 414,
+            //     height: 300,
+            //     axisX: {
+            //     },
+            //     axisY: {
+            //         minimum: 0.74,
+            //         maximum: 0.9,
+            //         stepSize: 0.02
+            //     },
+            //     toolTip: {
+            //         shared: true
+            //     },
+            //     legend: {
+            //         cursor: "pointer",
+            //         verticalAlign: "bottom",
+            //         horizontalAlign: "left",
+            //         dockInsidePlotArea: true,
+            //         itemclick: toogleDataSeries
+            //     },
+            //     data: [{
+            //         type: "line",
+            //         showInLegend: true,
+            //         name: "serie 1",
+            //         markerType: "square",
+            //         color: "#F08080",
+            //         dataPoints: [
+            //             { x: 1, y: 0.85 },
+            //             { x: 2, y: 0.76 },
+            //             { x: 3, y: 0.88 },
+            //             { x: 4, y: 0.79 },
+            //             { x: 5, y: 0.82 },
+            //         ]
+            //     },
+            //     {
+            //         type: "line",
+            //         showInLegend: true,
+            //         name: "serie 2",
+            //         markerType: "square",
+            //         color: "#1b8ec5",
+            //         dataPoints: [
+            //             { x: 1, y: 0.79 },
+            //             { x: 2, y: 0.89 },
+            //             { x: 3, y: 0.79 },
+            //             { x: 4, y: 0.82 },
+            //             { x: 5, y: 0.85 },
+            //         ]
+            //     }]
+            // };
+            // $("#chartContainer").CanvasJSChart(options);
 
             var optionsB = {
                 title: {

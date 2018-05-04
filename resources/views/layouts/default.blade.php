@@ -14,6 +14,7 @@
 			<link href="{{ asset('css/vendors.css') }}" rel="stylesheet">
 			<link href="{{ asset('fonts/icomoon-front/style.css') }}" rel="stylesheet">
 			<link href="{{ asset('css/style.css') }}" rel="stylesheet">
+			<link href="{{ asset('css/app.css') }}" rel="stylesheet">
 		@else
 			<link href="{{ elixir('css/vendors_mix.css') }}" rel="stylesheet">
 			<link href="{{ elixir('css/style.css') }}" rel="stylesheet">
@@ -56,6 +57,8 @@
 			<script src="{{asset('vendors/moment/moment.js')}}"></script>
 			<script src="{{asset('vendors/chart.js/dist/Chart.js')}}"></script>
 			<script src="{{asset('vendors/chart.js/dist/Chart.bundle.js')}}"></script>
+			<script src="{{asset('vendors/ngActivityIndicator/ngActivityIndicator.js')}}"></script>
+			<script src="{{asset('vendors/ngActivityIndicator/ngActivityIndicator.min.js')}}"></script>
 			<script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
 			<script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
 

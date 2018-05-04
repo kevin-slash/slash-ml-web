@@ -45,7 +45,8 @@
 			</div>
 		</div>
 		
-		<div ng-show="dialog" class="col-lg-8" ng-cloak>
+		<div ng-show="dialog" class="col-lg-8 no-padd" ng-cloak>
+			<div class="my-svg"><span class="svg-text">Processing ...</span></div>
 			<div class="execute">
 				<label>Predicted result:</label>
 				<div style="padding-top: 10px;">
@@ -54,7 +55,7 @@
 							<table style="width:100%;height: 100%;">
 								<tr>
 								<th>On testing data</th>
-								<th>Time</th>
+								<th>Computational time</th>
 								</tr>
 								<tr>
 								<td>Naive Bayes</td>
@@ -80,7 +81,7 @@
 							<table style="width:100%;height: 100%;">
 								<tr>
 								<th>On training data</th>
-								<th>Time</th>
+								<th>Computational time</th>
 								</tr>
 								<tr>
 								<td>Naive Bayes</td>
