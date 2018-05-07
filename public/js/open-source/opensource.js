@@ -34,7 +34,7 @@ app.controller('OpenSourceCtrl', function ($rootScope, $scope, Upload) {
             console.log(resp.data);
             $scope.myResult = resp.data;
 
-            $( ".my-svg" ).addClass( "display-none" );
+            $( ".my-svg" ).addClass( "d-none" );
 
             // var options = {
             //     animationEnabled: true,

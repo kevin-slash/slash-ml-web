@@ -13,7 +13,7 @@
 	    @if(App::environment('local'))
 			<link href="{{ asset('css/vendors.css') }}" rel="stylesheet">
 			<link href="{{ asset('fonts/icomoon-front/style.css') }}" rel="stylesheet">
-			<link href="{{ asset('css/style.css') }}" rel="stylesheet">
+			<!-- <link href="{{ asset('css/style.css') }}" rel="stylesheet"> -->
 			<link href="{{ asset('css/app.css') }}" rel="stylesheet">
 		@else
 			<link href="{{ elixir('css/vendors_mix.css') }}" rel="stylesheet">
