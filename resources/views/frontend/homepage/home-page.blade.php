@@ -49,7 +49,7 @@
 			</div>
 			<div class="padding-top">
 				<a href="" ng-click="ImageFilesUpload()">
-					<button class="btn btn-primary" ng-click="dialog=true" id="button1" ng-disabled="isDisabled">Execute</button>
+					<button class="btn btn-primary" ng-click="dialog=true" id="button1" type="submit">Execute</button>
 				</a>
 			</div>
 		</div>
