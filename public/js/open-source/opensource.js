@@ -7,6 +7,7 @@ app.controller('OpenSourceCtrl', function ($rootScope, $scope, Upload) {
 
     $scope.uploadFiles = function (files) {
         $scope.urlImageLogo = $scope.getUrlFileImage(files[0]);
+        // console.log($scope.imageFiles);
         $scope.imageFiles = files;
     }
 
@@ -18,7 +19,8 @@ app.controller('OpenSourceCtrl', function ($rootScope, $scope, Upload) {
                 datasource: $scope.imageFiles[0],
                 params: {
                     "algo": ["NB", "NN"],
-                    "eval_setting": "loo"
+                    "eval_setting": "loo",
+                    // "eval_setting": $("#dropdownList option:selected").val(),
                 }
             },
             headers: {

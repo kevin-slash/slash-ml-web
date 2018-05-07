@@ -39,7 +39,7 @@
 			</div>
 			<div style="padding-top: 10px;">
 				<select id="dropdownList" class="p-2">
-					<option selected="selected">Select</option>
+					<option selected="selected" disabled>Select</option>
 					<option value="loo">loo</option>
 					<option value="5-fools">5-fools</option>
 					<option value="10-fools">10-fools</option>

@@ -12,16 +12,16 @@ return [
     */
 
     'defaults' => [
-        '_title' => 'Teng Lay Group | Cambodia',
-        '_full_title' => 'The first leading Import Export and Transportation Company in Cambodia | Teng Lay Group',
-        '_desc' => 'Teng Lay Group is the first leading Import Export and Transportation Company in Cambodia. Throughout many years, we have built international network of freight forwarding agents which able us to provide local and international transportation, Customs Clearance and Brokerage, Air Freight or Sea Freight, Logistics and Warehousing Management, Small and Heavy project Cargo services to most geographical areas of the world.',
+        '_title' => 'Slash ML',
+        '_full_title' => 'Slash ML',
+        '_desc' => 'Slash ML is learning and doing on AI.',
 
         '_keywords' => 'company, logistic, Freight, Ocean, Broker, warehousing, distribution, quote, request quote, order, customer, transportation, transport, goods, product, logistic cambodia, import, export, trucking, international freight, customs clearance, brokerage, inland transportation, warehouse, supply chain mgt, container modification',
-        '_author' => 'Flexitech Cambodia Team',
-        '_developers' => 'Flexitech Cambodia Web Team, API Team, Design Team',
-        '_developer' => 'Flexitech Cambodia Web Team',
+        '_author' => 'Slash Cambodia Team',
+        '_developers' => 'Slash Cambodia Web Team, API Team, Design Team',
+        '_developer' => 'Slash Cambodia Web Team',
         '_contact' => 'info@flexitech.io',
-        '_img' => '/img/facebook-share-v1.jpg',
+        '_img' => '',
     ],
 
     /*
