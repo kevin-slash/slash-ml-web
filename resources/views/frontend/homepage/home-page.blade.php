@@ -1,11 +1,13 @@
 @extends('layouts.default')
 @section('content')
+<div class="p-5">
+	<h1 class="text-center"><u>Slash ML</u></h1>
 	<div class="p-4 row m-0" ng-controller="OpenSourceCtrl" ng-app="StarterApp" style="width: 100%;">
 		<div class="col-lg-4">
 			<div class="input-group">
 				<input class="form-control text-truncate" placeholder="zip blob" type="text" name="fbrowse" ng-model="urlImageLogo" disabled> 
 				<div class="input-group-append">
-					<button class="btn btn-primary" type="button" ngf-select="uploadFiles($files)" ngf-accept="'application/x-zip-compressed'" class="margin-left" require>Button</button>
+					<button class="btn btn-primary" type="button" ngf-select="uploadFiles($files)" ngf-accept="'application/x-zip-compressed'" class="margin-left" require>Browse</button>
 				</div>
 			</div>
 			<div class="padding-top">
@@ -150,6 +152,7 @@
 		</div>
 	
 	</div>
+</div>
 @stop
 @section('scripts')
 @stop

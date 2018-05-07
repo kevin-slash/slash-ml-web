@@ -13,8 +13,8 @@ app.controller('OpenSourceCtrl', function ($rootScope, $scope, Upload) {
 
     $scope.ImageFilesUpload = function () {
 
-        $scope.isDisabled = true;
-        return false;
+        // $scope.isDisabled = true;
+        // return false;
 
         Upload.upload({
             url: namespace.domain + 'getresults',
