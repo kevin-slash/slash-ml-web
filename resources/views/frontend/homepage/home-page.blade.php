@@ -18,7 +18,7 @@
 			</div>
 			
 			<div class="padding-top">
-				<table>
+				<table class="table table-bordered">
 					<thead>
 						<tr>
 							<th class="p-3">Naive Bayes</th>
@@ -61,7 +61,7 @@
 				<div style="padding-top: 10px;">
 					<div class="row">
 						<div class="column">
-							<table style="width:100%;height: 100%;">
+							<table style="width:100%;height: 100%;" class="table table-bordered">
 								<thead>
 									<tr>
 										<th>On testing data</th>
@@ -107,7 +107,7 @@
 							</div> -->
 						</div>
 						<div class="column">
-							<table style="width:100%;height: 100%;">
+							<table style="width:100%;height: 100%;" class="table table-bordered">
 								<thead>
 									<tr>
 										<th>On training data</th>
