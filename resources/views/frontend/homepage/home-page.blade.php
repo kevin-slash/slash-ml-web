@@ -91,10 +91,10 @@
 									<tr>
 										<td>Decision Tree</td>
 										<th>
-											...%
+											<span ng-bind="myResult.on_testing_data.DT.accuracy"></span>%
 										</th>
 										<th>
-											...s
+											<span ng-bind="myResult.on_testing_data.DT.time"></span>s
 										</th>
 									</tr>
 								</tbody>

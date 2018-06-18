@@ -114,6 +114,10 @@ app.controller('OpenSourceCtrl', function ($rootScope, $scope, Upload) {
                         label: "NN",
                         y: $scope.myResult.figure_on_testing_data.NN
                     },
+                    {
+                        label: "DT",
+                        y: $scope.myResult.figure_on_testing_data.DT
+                    },
                     ]
                 }]
             };
