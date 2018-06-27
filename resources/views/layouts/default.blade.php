@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<?php
+    $version = '?v1';
+?>
 <html lang="{{ $lang=='kh'?'km-kh':'en-us' }}">
 	<head>
 
@@ -67,7 +70,7 @@
 
 			<script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
 			<script type="text/javascript" src="{{ asset('js/env.js') }}"></script>
-			<script type="text/javascript" src="{{ asset('js/open-source/opensource.js') }}"></script>			
+			<script type="text/javascript" src="{{ asset('js/open-source/opensource.js'.$version) }}"></script>			
 
 		@else
 			<script type="text/javascript" src="{{ elixir('js/build/hh-script.js') }}"  async="true"></script> 

@@ -16,9 +16,17 @@ body {
 
 table,
 th {
-  border: 1px solid black;
+  border: 1px solid black !important;
   border-collapse: collapse;
   text-align: center;
+}
+
+.table td {
+  border-right: 1px solid;
+}
+
+.table-bordered td {
+  border: none;
 }
 
 * {
@@ -34,6 +42,10 @@ th {
   padding: 20px;
   height: 300px;
   /* Should be removed. Only for demonstration */
+}
+
+.table-bordered {
+  border: 1px solid #000000 !important;
 }
 
 .my-svg {
@@ -113,5 +125,129 @@ th {
 
 .modal-backdrop {
   z-index: 0 !important;
+}
+
+/*--------------------------
+* MENU TABS
+---------------------------*/
+
+.menu__tabs {
+  list-style: none;
+  overflow: hidden;
+  padding: 0;
+}
+
+.menu__tabs li {
+  float: left;
+  font-size: 1em;
+}
+
+.menu__tabs a {
+  padding: 1em;
+  background: #fff;
+  display: inline-block;
+  color: black;
+  padding: 10px 30px;
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.menu__tabs a:hover {
+  background: #fff;
+  color: #3E495B;
+  border-color: #fff !important;
+}
+
+.menu__tabs a.active {
+  color: #DF384D;
+  background: rgba(189, 189, 189, 0.57);
+  border: none;
+}
+
+.menu__tabs a.active:hover {
+  color: #DF384D;
+}
+
+.menu__tabs a:focus {
+  border-color: #fff !important;
+}
+
+.menu__tabs a.active i {
+  color: #DF384D;
+}
+
+.menu__tabs a i {
+  margin-right: 3px;
+  color: silver;
+}
+
+/*--------------------------
+* MENU WRAPPER
+---------------------------*/
+
+.menu {
+  position: relative;
+}
+
+.menu__wrapper {
+  position: relative;
+  background-color: rgba(189, 189, 189, 0.57);
+  border: none;
+}
+
+.menu--shadow {
+  position: absolute;
+  z-index: 300;
+  bottom: -5px;
+  height: 25px;
+  width: 100%;
+}
+
+.menu--shadow:after,
+.menu--shadow:before {
+  content: '';
+  display: block;
+  width: 50%;
+  height: 25px;
+  position: absolute;
+  left: 0;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 25px;
+  -webkit-box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.25);
+  -webkit-transform: scale(0.8) rotate(-4deg);
+  transform: scale(0.8) rotate(-4deg);
+}
+
+.menu--shadow:after {
+  right: 0;
+  left: auto;
+  -webkit-transform: scale(0.8) rotate(4deg);
+  transform: scale(0.8) rotate(4deg);
+}
+
+.menu__wrapper .menu__item {
+  line-height: 1.3;
+  display: none;
+  padding: 0 0 2rem 0 !important;
+}
+
+.menu__wrapper .menu__item.item-active {
+  display: block;
+}
+
+.menu__wrapper .menu__item h3 {
+  font-size: 1.8em;
+  color: #333b48;
+  border-bottom: 1px solid #d9d9d9;
+  padding-bottom: 5px;
+  margin-bottom: 12px;
+}
+
+.menu__wrapper .menu__item p {
+  font-size: 1.3em;
+  line-height: 1.6em;
+  color: #76716f;
 }
 
