@@ -164,12 +164,12 @@ app.controller('OpenSourceCtrl', function ($rootScope, $scope, Upload, $http) {
             method: "POST",
             data: $.param($scope.formData),
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
-        }).success(function(data) {
-            console.log(data)
-            $scope.dataView = data;
-            $scope.outputTextDT = data.DT;
-            $scope.outputTextNN = data.NN;
-            $scope.outputTextNB = data.NB;
+        }).then(function(resp) {
+            console.log(resp)
+            $scope.dataView = resp;
+            $scope.outputTextDT = resp.data.DT;
+            $scope.outputTextNN = resp.data.NN;
+            $scope.outputTextNB = resp.data.NB;
         });
     }
 
