@@ -1,6 +1,6 @@
 @extends('layouts.default')
 @section('content')
-<section>
+<section ng-controller="OpenSourceCtrl" ng-app="StarterApp">
 	<div class="p-5">
 
 		<h1 class="text-center"><u>Slash ML</u></h1>
@@ -8,13 +8,13 @@
 			<div class="menu">
 					<ul class="menu__tabs mb-0">
 							<li><a href="#item-1" class=" text-uppercase">Training</a></li>
-							<li><a href="#item-2" class="text-uppercase">Channel</a></li>
-							<li><a href="#item-3" class="text-uppercase active">Description</a></li>
+							<li><a href="#item-2" class="text-uppercase active">Channel</a></li>
+							<li><a href="#item-3" class="text-uppercase">Description</a></li>
 					</ul>
 					<section class="menu__wrapper">
 
 							<article id="item-1" class="menu__item">
-								<div class="p-4 row m-0" ng-controller="OpenSourceCtrl" ng-app="StarterApp" style="width: 100%;">
+								<div class="p-4 row m-0" style="width: 100%;">
 									<div class="col-lg-4">
 										<div class="input-group">
 											<input class="form-control text-truncate" placeholder="zip blob" type="text" name="fbrowse" ng-model="urlImageLogo" disabled> 
@@ -166,16 +166,16 @@
 								</div>
 							</article>
 							
-							<article id="item-2" class="menu__item">
+							<article id="item-2" class="menu__item item-active">
 								<div class="p-4">
 									<form class="form-inline">
 										<div class="form-group mx-sm-3 mb-2">
 											<label for="inputText" class="sr-only">Please filled this field</label>
-											<textarea rows="1" cols="50" class="form-control" id="inputText" placeholder="Please filled this field" style="resize: none"></textarea>
+											<textarea rows="1" cols="50" class="form-control" id="inputText" placeholder="Please filled this field" style="resize: none" ng-model="textAreaInput"></textarea>
 										</div>
-										<button type="submit" class="btn btn-primary mb-2">Add</button>
+										<button type="button" class="btn btn-primary mb-2" ng-click="addToTable()">Add</button>
 									</form>
-									<table class="table mt-4">
+									<table class="table mt-4" ng-cloak>
 										<thead>
 											<tr>
 												<th scope="col">#</th>
@@ -185,16 +185,31 @@
 										</thead>
 										<tbody>
 											<tr>
-												<th scope="row">1</th>
-												<td>Mark</td>
-												<td>Otto</td>
+												<th>1</th>
+												<td ng-bind="textAreaInput"></td>
+												<td>
+													<div>
+														<div ng-hide="!outputTextDT" class="mb-4">
+															DT: 
+															<span ng-bind="outputTextDT"></span>
+														</div>
+														<div ng-hide="!outputTextNB" class="mb-4">
+															NB: 
+															<span ng-bind="outputTextNB"></span>
+														</div>
+														<div ng-hide="!outputTextNN">
+															NN: 
+															<span ng-bind="outputTextNN"></span>
+														</div>
+													</div>
+												</td>
 											</tr>
 										</tbody>
 									</table>
 								</div>
 							</article>
 
-							<article id="item-3" class="menu__item item-active">
+							<article id="item-3" class="menu__item">
 								<div class="p-4">
 									<h5 class="mt-4">Text classification</h5>
 									<text>&emsp;Automatic text classification into predefined categories has attracted increasing interests within these last decades due to the large volume of documents available in digital form. Because of the necessity of text classification, the research in this topic has emerged in both academic and commercial communities (e.g., information retrieval of search engines). The main goal of text classification is either to identify a given article or document to a predefined class or to identify a new class for existing documents. We are interested in the first group of text classification problem.</text>

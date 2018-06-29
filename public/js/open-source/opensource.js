@@ -1,4 +1,4 @@
-app.controller('OpenSourceCtrl', function ($rootScope, $scope, Upload) {
+app.controller('OpenSourceCtrl', function ($rootScope, $scope, Upload, $http) {
 
     $(function () {
         var $menu_tabs = $('.menu__tabs li a');
@@ -154,6 +154,24 @@ app.controller('OpenSourceCtrl', function ($rootScope, $scope, Upload) {
 
     };
     // uploadFiles();
+
+    $scope.addToTable = function () {
+        var url = namespace.domain + 'classify';
+        var inputText = $scope.textAreaInput;
+        $scope.formData = {'params':`{"input_text":"${inputText}"}`};
+        $http({
+            url: url,
+            method: "POST",
+            data: $.param($scope.formData),
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
+        }).success(function(data) {
+            console.log(data)
+            $scope.dataView = data;
+            $scope.outputTextDT = data.DT;
+            $scope.outputTextNN = data.NN;
+            $scope.outputTextNB = data.NB;
+        });
+    }
 
     $scope.getUrlFileImage = function (file) {
         if (!file) return;
