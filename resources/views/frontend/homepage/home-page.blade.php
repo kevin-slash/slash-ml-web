@@ -19,9 +19,9 @@
 					</ul>
 					<section class="menu__wrapper">
 
-							<article id="item-1" class="menu__item">
+							<article id="item-1" class="menu__item item-active">
 								<div class="p-4 row m-0" style="width: 100%;">
-									<div class="col-lg-4">
+									<div class="col-lg-6">
 										<div class="input-group">
 											<input class="form-control text-truncate" placeholder="zip blob" type="text" name="fbrowse" ng-model="urlImageLogo" disabled> 
 											<div class="input-group-append">
@@ -46,9 +46,80 @@
 												</thead>
 												<tbody>
 													<tr style="height: 50px;">
-														<td>default</td>
-														<td>default</td>
-														<td>default</td>
+														<td>
+															default
+														</td>
+														<td>
+															<div>
+																<div class="form-group row">
+																	<label for="hidden_layer_sizes" class="col-sm-4 col-form-label">hidden layer sizes:</label>
+																	<div class="col-sm-8">
+																		<input type="text" class="form-control" id="hidden_layer_sizes" placeholder="hidden layer sizes" ng-model="hidden">
+																	</div>
+																</div>
+																<div class="form-group row">
+																	<label for="learning_rate" class="col-sm-4 col-form-label">learning rate:</label>
+																	<div class="col-sm-8">
+																		<input type="number" class="form-control" id="learning_rate" placeholder="learning rate" ng-model="learning">
+																	</div>
+																</div>
+																<div class="form-group row">
+																	<label for="momentum" class="col-sm-4 col-form-label">momentum:</label>
+																	<div class="col-sm-8">
+																		<input type="number" class="form-control" id="momentum" placeholder="momentum" ng-model="momentum">
+																	</div>
+																</div>
+																<div class="form-group row">
+																	<label for="random_state" class="col-sm-4 col-form-label">random state:</label>
+																	<div class="col-sm-8">
+																		<input type="number" class="form-control" id="random_state" placeholder="random state" ng-model="random">
+																	</div>
+																</div>
+																<div class="form-group row">
+																	<label for="max_iter" class="col-sm-4 col-form-label">max iter:</label>
+																	<div class="col-sm-8">
+																		<input type="number" class="form-control" id="max_iter" placeholder="max iter" ng-model="iter">
+																	</div>
+																</div>
+																<div class="form-group row">
+																	<label class="col-sm-4 col-form-label" for="activation">activation:</label>
+																	<div class="col-sm-8">
+																		<select class="form-control" id="activation">
+																			<option>tanh</option>
+																			<option>sigmoid</option>
+																			<option>ReLU</option>
+																		</select>
+																	</div>
+																</div>
+															</div>
+														</td>
+														<td>
+															<div>
+																<div class="form-group row">
+																	<label class="col-sm-4 col-form-label" for="criterion">criterion:</label>
+																	<div class="col-sm-8">
+																		<select class="form-control" id="criterion" ng-model="criterion">
+																			<option>gini</option>
+																			<option>entropy</option>
+																			<option>gain_ratio</option>
+																			<option>mse</option>
+																		</select>
+																	</div>
+																</div>
+																<div class="form-group row">
+																	<label for="max_depth" class="col-sm-4 col-form-label">max depth:</label>
+																	<div class="col-sm-8">
+																		<input type="text" class="form-control" id="max_depth" placeholder="max depth" ng-model="depth">
+																	</div>
+																</div>
+																<div class="form-group row">
+																	<label for="min_criterion" class="col-sm-4 col-form-label">min criterion:</label>
+																	<div class="col-sm-8">
+																		<input type="text" class="form-control" id="min_criterion" placeholder="min criterion" ng-model="minCriterion">
+																	</div>
+																</div>
+															</div>
+														</td>
 													</tr>
 												</tbody>
 											</table>
@@ -187,8 +258,8 @@
 									Normally, we should consider two factors including accuracy and computational time. 
 								</div>
 							</article>
-							
-							<article id="item-2" class="menu__item item-active">
+							<!-- <pre><% datarows | json%></pre> -->
+							<article id="item-2" class="menu__item">
 								<div class="p-4">
 									<form class="form-inline">
 										<div class="form-group mx-sm-3 mb-2">
@@ -206,24 +277,13 @@
 											</tr>
 										</thead>
 										<tbody>
-											<tr>
-												<th>1</th>
-												<td ng-bind="textAreaInput"></td>
+											<tr ng-repeat="row in datarows">
+												<th><% $index + 1 %></th>
 												<td>
-													<div>
-														<div ng-hide="!outputTextDT" class="mb-4">
-															DT: 
-															<span ng-bind="outputTextDT"></span>
-														</div>
-														<div ng-hide="!outputTextNB" class="mb-4">
-															NB: 
-															<span ng-bind="outputTextNB"></span>
-														</div>
-														<div ng-hide="!outputTextNN">
-															NN: 
-															<span ng-bind="outputTextNN"></span>
-														</div>
-													</div>
+													<% row.input %>
+												</td>
+												<td>
+													<% row.output %>
 												</td>
 											</tr>
 										</tbody>

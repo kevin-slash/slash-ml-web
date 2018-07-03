@@ -23,6 +23,7 @@ th {
 
 .table td {
   border-right: 1px solid;
+  border-bottom: 1px solid;
 }
 
 .table-bordered td {
@@ -45,6 +46,10 @@ th {
 }
 
 .table-bordered {
+  border: 1px solid #000000 !important;
+}
+
+.table-bordered td {
   border: 1px solid #000000 !important;
 }
 
