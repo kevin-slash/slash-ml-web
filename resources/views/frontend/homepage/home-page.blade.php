@@ -3,12 +3,18 @@
 <section ng-controller="OpenSourceCtrl" ng-app="StarterApp">
 	<div class="p-5">
 
-		<h1 class="text-center"><u>Slash ML</u></h1>
-			
+		<h1 class="text-center"><u>Khmer ML</u></h1>
+			<div>
+				<h4>Introduction</h4>
+				To classify a single document, firstly the model is needed to be trained by uploading relevant training data in <i>Training</i>. 
+				After training, we obtain the model, therefore, we can classify the document by clicking <i>Classification</i>. 
+				Then insert texts into the textbox. For detailed explanation please check in <i>Description</i>.
+				<br><br> 
+			</div>
 			<div class="menu">
 					<ul class="menu__tabs mb-0">
 							<li><a href="#item-1" class=" text-uppercase">Training</a></li>
-							<li><a href="#item-2" class="text-uppercase active">Channel</a></li>
+							<li><a href="#item-2" class="text-uppercase active">Classification</a></li>
 							<li><a href="#item-3" class="text-uppercase">Description</a></li>
 					</ul>
 					<section class="menu__wrapper">
@@ -66,103 +72,119 @@
 										</div>
 									</div>
 									
-									<div ng-show="dialog" class="col-lg-8 no-padd" style="overflow: hidden" ng-cloak>
-										<div class="my-svg column"><span class="svg-text">Processing ...</span></div>
+									<div ng-show="dialog" class="col-lg-8 no-padd" style="overflow: hidden; height: 700px;" ng-cloak>
+										<div class="my-svg column"><span class="svg-text"><b>Training classifiers and predicting ...</b></span></div>
 										<div class="execute">
 											<label>Predicted result:</label>
-											<div style="padding-top: 10px;">
-												<div class="row">
-													<div class="column">
-														<table style="width:100%;height: 100%;" class="table table-bordered">
-															<thead>
-																<tr>
-																	<th>On testing data</th>
-																	<th>Accuracy</th>
-																	<th>Computational time</th>
-																</tr>
-															</thead>
-															<tbody>
-																<tr>
-																	<td>Naive Bayes</td>
-																	<th>
-																		<span ng-bind="myResult.on_testing_data.NB.accuracy"></span>%
-																	</th>
-																	<th> 
-																		<span ng-bind="myResult.on_testing_data.NB.time"></span>s
-																	</th>
-																</tr>
-																<tr>
-																	<td>Neural Network</td>
-																	<th>
-																		<span ng-bind="myResult.on_testing_data.NN.accuracy"></span>%
-																	</th>
-																	<th>  
-																		<span ng-bind="myResult.on_testing_data.NN.time"></span>s
-																	</th>
-																</tr>
-																<tr>
-																	<td>Decision Tree</td>
-																	<th>
-																		<span ng-bind="myResult.on_testing_data.DT.accuracy"></span>%
-																	</th>
-																	<th>
-																		<span ng-bind="myResult.on_testing_data.DT.time"></span>s
-																	</th>
-																</tr>
-															</tbody>
-														</table>
-														<div class="mt-4">
-															<div id="chartContainerBar"></div>
-														</div>
-														<!-- <div class="mt-4">
-															<div id="chartContainer"></div>
-														</div> -->
+											
+											<div class="row">
+												<div class="column">
+													<table style="width:100%;height: 100%;" class="table table-bordered">
+														<thead>
+															<tr>
+																<th>On testing data</th>
+																<th>Accuracy</th>
+																<th>Computational time</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td>Naive Bayes</td>
+																<th>
+																	<span ng-bind="myResult.on_testing_data.NB.accuracy"></span>%
+																</th>
+																<th> 
+																	<span ng-bind="myResult.on_testing_data.NB.time"></span>s
+																</th>
+															</tr>
+															<tr>
+																<td>Neural Network</td>
+																<th>
+																	<span ng-bind="myResult.on_testing_data.NN.accuracy"></span>%
+																</th>
+																<th>  
+																	<span ng-bind="myResult.on_testing_data.NN.time"></span>s
+																</th>
+															</tr>
+															<tr>
+																<td>Decision Tree</td>
+																<th>
+																	<span ng-bind="myResult.on_testing_data.DT.accuracy"></span>%
+																</th>
+																<th>
+																	<span ng-bind="myResult.on_testing_data.DT.time"></span>s
+																</th>
+															</tr>
+														</tbody>
+													</table>
+													<div class="mt-4">
+														<div id="chartContainerBar"></div>
 													</div>
-													<div class="column">
-														<table style="width:100%;height: 100%;" class="table table-bordered">
-															<thead>
-																<tr>
-																	<th>On training data</th>
-																	<th>Accuracy</th>
-																	<th>Computational time</th>
-																</tr>
-															</thead>
-															<tbody>
-																<tr>
-																	<td>Naive Bayes</td>
-																	<th>
-																		<span ng-bind="myResult.on_training_data.NB.accuracy"></span>%
-																	</th>
-																	<th>
-																		<span ng-bind="myResult.on_training_data.NB.time"></span>s
-																	</th>
-																</tr>
-																<tr>
-																	<td>Neural Network</td>
-																	<th>
-																		<span ng-bind="myResult.on_training_data.NN.accuracy"></span>%
-																	</th>
-																	<th>
-																		<span ng-bind="myResult.on_training_data.NN.time"></span>s
-																	</th>
-																</tr>
-																<tr>
-																	<td>Decision Tree</td>
-																	<th>
-																		<span ng-bind="myResult.on_training_data.DT.accuracy"></span>%
-																	</th>
-																	<th>
-																		<span ng-bind="myResult.on_training_data.DT.time"></span>s
-																	</th>
-																</tr>
-															</tbody>
-														</table>
-													</div>
+													<!-- <div class="mt-4">
+														<div id="chartContainer"></div>
+													</div> -->
+												</div>
+												<div class="column">
+													<table style="width:100%;height: 100%;" class="table table-bordered">
+														<thead>
+															<tr>
+																<th>On training data</th>
+																<th>Accuracy</th>
+																<th>Computational time</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td>Naive Bayes</td>
+																<th>
+																	<span ng-bind="myResult.on_training_data.NB.accuracy"></span>%
+																</th>
+																<th>
+																	<span ng-bind="myResult.on_training_data.NB.time"></span>s
+																</th>
+															</tr>
+															<tr>
+																<td>Neural Network</td>
+																<th>
+																	<span ng-bind="myResult.on_training_data.NN.accuracy"></span>%
+																</th>
+																<th>
+																	<span ng-bind="myResult.on_training_data.NN.time"></span>s
+																</th>
+															</tr>
+															<tr>
+																<td>Decision Tree</td>
+																<th>
+																	<span ng-bind="myResult.on_training_data.DT.accuracy"></span>%
+																</th>
+																<th>
+																	<span ng-bind="myResult.on_training_data.DT.time"></span>s
+																</th>
+															</tr>
+														</tbody>
+													</table>
 												</div>
 											</div>
+											
 										</div>
 									</div>
 								
+								</div>
+								<div style="padding-left: 15px; padding-right: 15px">
+									<h5> Results</h5>
+										The results are illustrated in two manners, e.g., predicted results on the testing and training data. 
+										<ol>
+											<li>	<b>Testing data:</b> These data are not involved in training process. 
+														So the accuracy on these data can express the generalization of the methods toward new data.  
+											</li>
+											<li>	<b>Training data:</b> These data are used to train the model. 
+														Predicting resulst on these data can show whether the models are overfitted or not. 
+														The model that procuces high accuracy on training data, but performs poorly on testing is overfitted model.   
+											</li>
+										</ol>
+									<h5>CPU Computational time</h5>
+									Selecting the right machine learning method for specific problem is very important since it can save time and cost. 
+									Normally, we should consider two factors including accuracy and computational time. 
 								</div>
 							</article>
 							
