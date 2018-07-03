@@ -1,8 +1,18 @@
 var app = angular.module('StarterApp', [
     'ngResource', 'ngFileUpload', 'ngRoute']);
 var namespace = {};
-app.config(['$httpProvider', function ($httpProvider) {
-    $httpProvider.defaults.timeout = 80000;}]);
+
+// app.config(['$httpProvider', function ($httpProvider, $interpolateProvider) {
+    app.config(function($interpolateProvider) {
+        // $httpProvider.defaults.headers.common['Access-Control-Allow-Headers'] = '*';
+    
+    
+    
+        $interpolateProvider.startSymbol('<%');
+        $interpolateProvider.endSymbol('%>');
+    
+    })
+
 namespace.app = app;
 namespace.domain = location.protocol + '//' + document.domain + ":" + (location.port || (location.protocol === 'http' ? '80' : '443')) + '/';
 namespace.guid = function() {

@@ -13,6 +13,8 @@ app.controller('OpenSourceCtrl', function ($rootScope, $scope, Upload, $http) {
 
     });
 
+    $scope.datarows = [];
+
     $scope.imageFiles = [];
     $scope.urlImageLogo = '';
 
@@ -26,6 +28,11 @@ app.controller('OpenSourceCtrl', function ($rootScope, $scope, Upload, $http) {
 
         $("button[type=submit]").attr("disabled", "disabled");
 
+        var hidden = $scope.hidden.split(",");
+        var activation = $('#activation').find(":selected").text();
+        var criterion = $('#criterion').find(":selected").text();
+        // console.log(activation);
+
         Upload.upload({
             url: namespace.domain + 'getresults',
             method: 'POST',
@@ -34,6 +41,19 @@ app.controller('OpenSourceCtrl', function ($rootScope, $scope, Upload, $http) {
                 params: {
                     "algo": ["NB", "NN"],
                     "eval_setting": "loo",
+                    "NB": {
+                        hidden_layer_sizes: hidden,
+                        learning_rate : $scope.learning,
+                        momentum: $scope.momentum,
+                        random_state: $scope.random,
+                        max_iter: $scope.iter,
+                        activation: activation,
+                    },
+                    "DT": {
+                        criterion : criterion,
+                        max_depth: $scope.depth, 
+                        min_criterion: $scope.minCriterion,
+                    }
                     // "eval_setting": $("#dropdownList option:selected").val(),
                 }
             },
@@ -166,10 +186,10 @@ app.controller('OpenSourceCtrl', function ($rootScope, $scope, Upload, $http) {
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
         }).then(function(resp) {
             console.log(resp)
-            $scope.dataView = resp;
-            $scope.outputTextDT = resp.data.DT;
-            $scope.outputTextNN = resp.data.NN;
-            $scope.outputTextNB = resp.data.NB;
+            $scope.datarows.push({ 
+                input:inputText,
+                output:"DT : "+resp.data.DT.toString() + ";" +" NN : "+resp.data.NN.toString()  + ";" +" NB : "+resp.data.NB.toString() + ";"
+            });
         });
     }
 
