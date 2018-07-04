@@ -31,7 +31,7 @@
 										<div class="padding-top">
 										
 											<label>Parameter Settings:</label>
-											<button class="btn btn-success" type="button">Advance</button>
+											<!-- <button class="btn btn-success" type="button">Advance</button> -->
 											
 										</div>
 										
