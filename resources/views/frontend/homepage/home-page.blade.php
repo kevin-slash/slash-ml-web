@@ -13,17 +13,17 @@
 			</div>
 			<div class="menu">
 					<ul class="menu__tabs mb-0">
-							<li><a href="#item-1" class=" text-uppercase">Training</a></li>
-							<li><a href="#item-2" class="text-uppercase active">Classification</a></li>
+							<li><a href="#item-1" class=" text-uppercase active">Training</a></li>
+							<li><a href="#item-2" class="text-uppercase">Classification</a></li>
 							<li><a href="#item-3" class="text-uppercase">Description</a></li>
 					</ul>
 					<section class="menu__wrapper">
 
 							<article id="item-1" class="menu__item item-active">
 								<div class="p-4 row m-0" style="width: 100%;">
-									<div class="col-lg-6">
+									<div class="col-lg-4">
 										<div class="input-group">
-											<input class="form-control text-truncate" placeholder="zip blob" type="text" name="fbrowse" ng-model="urlImageLogo" disabled> 
+											<input class="form-controle w-100" placeholder="zip blob" type="text" name="fbrowse" ng-model="urlImageLogo" disabled> 
 											<div class="input-group-append">
 												<button class="btn btn-primary" type="button" ngf-select="uploadFiles($files)" ngf-accept="'application/x-zip-compressed'" class="margin-left" require>Browse</button>
 											</div>
@@ -33,6 +33,29 @@
 											<label>Parameter Settings:</label>
 											<!-- <button class="btn btn-success" type="button">Advance</button> -->
 											
+										</div>
+
+										<div class="padding-top box">
+											
+											<label for="text" class="pb-3">Processing:</label>
+
+											<div class="form-group row">
+												<label for="method" class="col-sm-4 col-form-label">Method:</label>
+												<div class="col-sm-8">
+													<select class="form-control" id="method">
+														<option>doc_freq</option>
+														<option>info_gain</option>
+													</select>
+												</div>
+											</div>
+
+											<div class="form-group row">
+												<label for="threshold" class="col-sm-4 col-form-label">Threshold:</label>
+												<div class="col-sm-8">
+													<input type="number" class="form-control" id="threshold" placeholder="threshold" ng-model="threshold">
+												</div>
+											</div>
+
 										</div>
 										
 										<div class="padding-top">
@@ -64,7 +87,7 @@
 																	</div>
 																</div>
 																<div class="form-group row">
-																	<label for="momentum" class="col-sm-4 col-form-label">momentum:</label>
+																	<label for="momentum" class="col-sm-4 col-form-label" style="word-break: break-all;">momentum:</label>
 																	<div class="col-sm-8">
 																		<input type="number" class="form-control" id="momentum" placeholder="momentum" ng-model="momentum">
 																	</div>
@@ -82,7 +105,7 @@
 																	</div>
 																</div>
 																<div class="form-group row">
-																	<label class="col-sm-4 col-form-label" for="activation">activation:</label>
+																	<label class="col-sm-4 col-form-label" for="activation" style="word-break: break-all;">activation:</label>
 																	<div class="col-sm-8">
 																		<select class="form-control" id="activation">
 																			<option>tanh</option>
@@ -98,7 +121,7 @@
 																<div class="form-group row">
 																	<label class="col-sm-4 col-form-label" for="criterion">criterion:</label>
 																	<div class="col-sm-8">
-																		<select class="form-control" id="criterion" ng-model="criterion">
+																		<select class="form-control" id="criterion">
 																			<option>gini</option>
 																			<option>entropy</option>
 																			<option>gain_ratio</option>
@@ -268,26 +291,28 @@
 										</div>
 										<button type="button" class="btn btn-primary mb-2" ng-click="addToTable()">Add</button>
 									</form>
-									<table class="table mt-4" ng-cloak>
-										<thead>
-											<tr>
-												<th scope="col">#</th>
-												<th scope="col">Input Text</th>
-												<th scope="col">Output Fields</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr ng-repeat="row in datarows">
-												<th><% $index + 1 %></th>
-												<td>
-													<% row.input %>
-												</td>
-												<td>
-													<% row.output %>
-												</td>
-											</tr>
-										</tbody>
-									</table>
+									<div class="table-wrapper-2">
+										<table class="table mt-4" ng-cloak>
+											<thead>
+												<tr>
+													<th scope="col">#</th>
+													<th scope="col">Input Text</th>
+													<th scope="col">Output Fields</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr ng-repeat="row in datarows">
+													<th><% $index + 1 %></th>
+													<td>
+														<% row.input %>
+													</td>
+													<td>
+														<% row.output %>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
 								</div>
 							</article>
 

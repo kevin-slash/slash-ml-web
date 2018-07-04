@@ -24,6 +24,15 @@ app.controller('OpenSourceCtrl', function ($rootScope, $scope, Upload, $http) {
         $scope.imageFiles = files;
     }
 
+    $scope.threshold = 25;
+    $scope.depth = 30;
+    $scope.minCriterion = 0.05;
+    $scope.hidden = "20,56";
+    $scope.learning = 0.012;
+    $scope.momentum = 0.5;
+    $scope.random = 0;
+    $scope.iter = 200;
+
     $scope.ImageFilesUpload = function () {
 
         $("button[type=submit]").attr("disabled", "disabled");
@@ -31,6 +40,7 @@ app.controller('OpenSourceCtrl', function ($rootScope, $scope, Upload, $http) {
         var hidden = $scope.hidden.split(",");
         var activation = $('#activation').find(":selected").text();
         var criterion = $('#criterion').find(":selected").text();
+        var method = $('#method').find(":selected").text();
         // console.log(activation);
 
         Upload.upload({
@@ -41,6 +51,10 @@ app.controller('OpenSourceCtrl', function ($rootScope, $scope, Upload, $http) {
                 params: {
                     "algo": ["NB", "NN"],
                     "eval_setting": "loo",
+                    "PR": {
+                        method: method,
+                        threshold: $scope.threshold
+                    },
                     "NB": {
                         hidden_layer_sizes: hidden,
                         learning_rate : $scope.learning,

@@ -65,6 +65,13 @@ th {
 //     background-color: #d0f3ff;
 // }
 
+.table-wrapper-2 {
+    display: block;
+    max-height: 500px;
+    overflow-y: auto;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
 .my-svg{
     background-image: url(/img/Blocks-1s-200px.svg);
     width: 100%;
@@ -76,7 +83,7 @@ th {
     background-color: white;
     .svg-text{
         position: relative;
-        top: 18rem;
+        top: 26rem;
     }
 }
 
