@@ -69,77 +69,59 @@
 												</thead>
 												<tbody>
 													<tr style="height: 50px;">
-														<td>
+														<td style="vertical-align: middle">
 															default
 														</td>
 														<td>
 															<div>
-																<div class="form-group row">
-																	<label for="hidden_layer_sizes" class="col-sm-4 col-form-label">hidden layer sizes:</label>
-																	<div class="col-sm-8">
-																		<input type="text" class="form-control" id="hidden_layer_sizes" placeholder="hidden layer sizes" ng-model="hidden">
-																	</div>
+																<div class="form-group text-left pt-2">
+																	<label for="hidden_layer_sizes" class="form-label">hidden layer sizes:</label>
+																	<input type="text" class="form-control" id="hidden_layer_sizes" placeholder="hidden layer sizes" ng-model="hidden">
 																</div>
-																<div class="form-group row">
-																	<label for="learning_rate" class="col-sm-4 col-form-label">learning rate:</label>
-																	<div class="col-sm-8">
-																		<input type="number" class="form-control" id="learning_rate" placeholder="learning rate" ng-model="learning">
-																	</div>
+																<div class="form-group text-left pt-2">
+																	<label for="learning_rate" class="form-label">learning rate:</label>
+																	<input type="number" class="form-control" id="learning_rate" placeholder="learning rate" ng-model="learning">
 																</div>
-																<div class="form-group row">
-																	<label for="momentum" class="col-sm-4 col-form-label" style="word-break: break-all;">momentum:</label>
-																	<div class="col-sm-8">
-																		<input type="number" class="form-control" id="momentum" placeholder="momentum" ng-model="momentum">
-																	</div>
+																<div class="form-group text-left pt-2">
+																	<label for="momentum" class="form-label" style="word-break: break-all;">momentum:</label>
+																	<input type="number" class="form-control" id="momentum" placeholder="momentum" ng-model="momentum">
 																</div>
-																<div class="form-group row">
-																	<label for="random_state" class="col-sm-4 col-form-label">random state:</label>
-																	<div class="col-sm-8">
-																		<input type="number" class="form-control" id="random_state" placeholder="random state" ng-model="random">
-																	</div>
+																<div class="form-group text-left pt-2">
+																	<label for="random_state" class="form-label">random state:</label>
+																	<input type="number" class="form-control" id="random_state" placeholder="random state" ng-model="random">
 																</div>
-																<div class="form-group row">
-																	<label for="max_iter" class="col-sm-4 col-form-label">max iter:</label>
-																	<div class="col-sm-8">
-																		<input type="number" class="form-control" id="max_iter" placeholder="max iter" ng-model="iter">
-																	</div>
+																<div class="form-group text-left pt-2">
+																	<label for="max_iter" class="form-label">max iter:</label>
+																	<input type="number" class="form-control" id="max_iter" placeholder="max iter" ng-model="iter">
 																</div>
-																<div class="form-group row">
-																	<label class="col-sm-4 col-form-label" for="activation" style="word-break: break-all;">activation:</label>
-																	<div class="col-sm-8">
-																		<select class="form-control" id="activation">
-																			<option>tanh</option>
-																			<option>sigmoid</option>
-																			<!-- <option>ReLU</option> -->
-																		</select>
-																	</div>
+																<div class="form-group text-left pt-2">
+																	<label class="form-label" for="activation" style="word-break: break-all;">activation:</label>
+																	<select class="form-control" id="activation">
+																		<option>tanh</option>
+																		<option>sigmoid</option>
+																		<!-- <option>ReLU</option> -->
+																	</select>
 																</div>
 															</div>
 														</td>
 														<td>
 															<div>
-																<div class="form-group row">
-																	<label class="col-sm-4 col-form-label" for="criterion">criterion:</label>
-																	<div class="col-sm-8">
-																		<select class="form-control" id="criterion">
-																			<option>gini</option>
-																			<option>entropy</option>
-																			<!-- <option>gain_ratio</option>
-																			<option>mse</option> -->
-																		</select>
-																	</div>
+																<div class="form-group text-left pt-2">
+																	<label class="form-label" for="criterion">criterion:</label>
+																	<select class="form-control" id="criterion">
+																		<option>gini</option>
+																		<option>entropy</option>
+																		<!-- <option>gain_ratio</option>
+																		<option>mse</option> -->
+																	</select>
 																</div>
-																<div class="form-group row">
-																	<label for="max_depth" class="col-sm-4 col-form-label">max depth:</label>
-																	<div class="col-sm-8">
-																		<input type="text" class="form-control" id="max_depth" placeholder="max depth" ng-model="depth">
-																	</div>
+																<div class="form-group text-left pt-2">
+																	<label for="max_depth" class="form-label">max depth:</label>
+																	<input type="text" class="form-control" id="max_depth" placeholder="max depth" ng-model="depth">
 																</div>
-																<div class="form-group row">
-																	<label for="min_criterion" class="col-sm-4 col-form-label">min criterion:</label>
-																	<div class="col-sm-8">
-																		<input type="text" class="form-control" id="min_criterion" placeholder="min criterion" ng-model="minCriterion">
-																	</div>
+																<div class="form-group text-left pt-2">
+																	<label for="min_criterion" class="form-label">min criterion:</label>
+																	<input type="text" class="form-control" id="min_criterion" placeholder="min criterion" ng-model="minCriterion">
 																</div>
 															</div>
 														</td>
