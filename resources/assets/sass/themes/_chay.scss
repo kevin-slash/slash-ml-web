@@ -80,11 +80,16 @@ th {
     text-align: center;
     background-position: center;
     position: absolute;
-    background-color: white;
+	background-color: white;
+	z-index: 99999;
     .svg-text{
         position: relative;
-        top: 26rem;
+        top: 25rem;
     }
+}
+
+#chartContainerBar{
+	height: 300px;
 }
 
 /* Clear floats after the columns */

@@ -21,7 +21,7 @@
 
 							<article id="item-1" class="menu__item item-active">
 								<div class="p-4 row m-0" style="width: 100%;">
-									<div class="col-lg-4">
+									<div class="col-lg-7">
 										<div class="input-group">
 											<input class="form-controle w-100" placeholder="zip blob" type="text" name="fbrowse" ng-model="urlImageLogo" disabled> 
 											<div class="input-group-append">
@@ -159,20 +159,20 @@
 												<option value="10-fools">10-folds</option>
 											</select>
 										</div>
-										<div class="padding-top">
+										<div class="padding-top mb-4">
 											<a href="" ng-click="ImageFilesUpload()">
 												<button class="btn btn-primary" ng-click="dialog=true" id="button1" type="submit">Execute</button>
 											</a>
 										</div>
 									</div>
 									
-									<div ng-show="dialog" class="col-lg-8 no-padd" style="overflow: hidden; height: 700px;" ng-cloak>
+									<div ng-show="dialog" class="col-lg-5 no-padd" style="overflow: hidden;" ng-cloak>
 										<div class="my-svg column"><span class="svg-text"><b>Training classifiers and predicting ...</b></span></div>
 										<div class="execute">
 											<label>Predicted result:</label>
 											
 											<div class="row">
-												<div class="column">
+												<div class="mt-4 col-lg-12">
 													<table style="width:100%;height: 100%;" class="table table-bordered">
 														<thead>
 															<tr>
@@ -211,14 +211,14 @@
 															</tr>
 														</tbody>
 													</table>
-													<div class="mt-4">
-														<div id="chartContainerBar"></div>
-													</div>
 													<!-- <div class="mt-4">
 														<div id="chartContainer"></div>
 													</div> -->
 												</div>
-												<div class="column">
+												<div class="mt-4 col-lg-12">
+													<div id="chartContainerBar"></div>
+												</div>
+												<div class="mt-4 col-lg-12">
 													<table style="width:100%;height: 100%;" class="table table-bordered">
 														<thead>
 															<tr>

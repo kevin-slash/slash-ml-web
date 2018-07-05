@@ -146,7 +146,7 @@ app.controller('OpenSourceCtrl', function ($rootScope, $scope, Upload, $http) {
                 title: {
                     text: "Averange results on testing data"
                 },
-                width: 414,
+                width: 420,
                 height: 300,
                 data: [{
                     // Change type to "doughnut", "line", "splineArea", etc.
