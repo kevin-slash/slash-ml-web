@@ -37,7 +37,7 @@ app.controller('OpenSourceCtrl', function ($rootScope, $scope, Upload, $http) {
 
         $("button[type=submit]").attr("disabled", "disabled");
 
-        var hidden = $scope.hidden.split(",");
+        var hidden = $scope.hidden;
         var activation = $('#activation').find(":selected").text();
         var criterion = $('#criterion').find(":selected").text();
         var method = $('#method').find(":selected").text();
@@ -55,7 +55,7 @@ app.controller('OpenSourceCtrl', function ($rootScope, $scope, Upload, $http) {
                         method: method,
                         threshold: $scope.threshold
                     },
-                    "NB": {
+                    "NN": {
                         hidden_layer_sizes: hidden,
                         learning_rate : $scope.learning,
                         momentum: $scope.momentum,

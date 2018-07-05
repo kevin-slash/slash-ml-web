@@ -110,7 +110,7 @@
 																		<select class="form-control" id="activation">
 																			<option>tanh</option>
 																			<option>sigmoid</option>
-																			<option>ReLU</option>
+																			<!-- <option>ReLU</option> -->
 																		</select>
 																	</div>
 																</div>
@@ -124,8 +124,8 @@
 																		<select class="form-control" id="criterion">
 																			<option>gini</option>
 																			<option>entropy</option>
-																			<option>gain_ratio</option>
-																			<option>mse</option>
+																			<!-- <option>gain_ratio</option>
+																			<option>mse</option> -->
 																		</select>
 																	</div>
 																</div>
