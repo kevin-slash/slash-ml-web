@@ -33,6 +33,7 @@ app.controller('OpenSourceCtrl', function ($rootScope, $scope, Upload, $http) {
     $scope.random = 0;
     $scope.iter = 200;
 
+
     $scope.ImageFilesUpload = function () {
 
         $("button[type=submit]").attr("disabled", "disabled");
@@ -41,7 +42,6 @@ app.controller('OpenSourceCtrl', function ($rootScope, $scope, Upload, $http) {
         var activation = $('#activation').find(":selected").text();
         var criterion = $('#criterion').find(":selected").text();
         var method = $('#method').find(":selected").text();
-        // console.log(activation);
 
         Upload.upload({
             url: namespace.domain + 'getresults',
@@ -77,6 +77,7 @@ app.controller('OpenSourceCtrl', function ($rootScope, $scope, Upload, $http) {
                 // 'X-GT-Request-ID': request,
                 // 'Authorization': 'Bearer ' + token,
                 "Content-Type": "application/json",
+                "Session-Id": $("meta[name='api:session']").attr('content'),
                 // "mimetype": "application/json",
 
             }
@@ -192,7 +193,8 @@ app.controller('OpenSourceCtrl', function ($rootScope, $scope, Upload, $http) {
     $scope.addToTable = function () {
         var url = namespace.domain + 'classify';
         var inputText = $scope.textAreaInput;
-        $scope.formData = {'params':`{"input_text":"${inputText}"}`};
+        var threshold = $scope.threshold;
+        $scope.formData = {'params':`{"input_text":"${inputText}","threshold": ${threshold}}`};
         $http({
             url: url,
             method: "POST",
