@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php
-    $version = '?v1';
+    $version = '?v2';
 ?>
 <html lang="{{ $lang=='kh'?'km-kh':'en-us' }}">
 	<head>
