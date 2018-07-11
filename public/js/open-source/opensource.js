@@ -199,7 +199,7 @@ app.controller('OpenSourceCtrl', function ($rootScope, $scope, Upload, $http) {
             url: url,
             method: "POST",
             data: $.param($scope.formData),
-            headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded', "Session-Id": $("meta[name='api:session']").attr('content'), }
         }).then(function(resp) {
             console.log(resp)
             $scope.datarows.push({ 
