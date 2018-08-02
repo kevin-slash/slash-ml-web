@@ -10,7 +10,6 @@ app.controller('OpenSourceCtrl', function ($rootScope, $scope, Upload, $http) {
             $('.menu__item').fadeOut(300);
             $(this.hash).delay(300).fadeIn();
         });
-
     });
 
     $scope.datarows = [];
