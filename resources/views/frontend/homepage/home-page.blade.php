@@ -255,7 +255,7 @@
 														So the accuracy on these data can express the generalization of the methods toward new data.  
 											</li>
 											<li>	<b>Training data:</b> These data are used to train the model. 
-														Predicting resulst on these data can show whether the models are overfitted or not. 
+														Predicting results on these data can show whether the models are overfitted or not. 
 														The model that procuces high accuracy on training data, but performs poorly on testing is overfitted model.   
 											</li>
 										</ol>
