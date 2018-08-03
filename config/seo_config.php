@@ -12,16 +12,16 @@ return [
     */
 
     'defaults' => [
-        '_title' => 'Slash ML',
-        '_full_title' => 'Slash ML',
-        '_desc' => 'Slash ML is learning and doing on AI.',
+        '_title' => 'Abstraction Layer',
+        '_full_title' => 'Abstraction Layer',
+        '_desc' => 'Abstraction Layer is learning and doing on AI.',
 
         '_keywords' => 'company, logistic, Freight, Ocean, Broker, warehousing, distribution, quote, request quote, order, customer, transportation, transport, goods, product, logistic cambodia, import, export, trucking, international freight, customs clearance, brokerage, inland transportation, warehouse, supply chain mgt, container modification',
         '_author' => 'Slash Cambodia Team',
         '_developers' => 'Slash Cambodia Web Team, API Team, Design Team',
         '_developer' => 'Slash Cambodia Web Team',
         '_contact' => 'info@flexitech.io',
-        '_img' => '',
+        '_img' => '/img/cambodia_ai.jpg?v1',
     ],
 
     /*

@@ -2,10 +2,11 @@
 @section('content')
 <section ng-controller="OpenSourceCtrl" ng-app="StarterApp">
 	<div class="p-5">
-
-		<h1 class="text-center"><u>Khmer ML</u></h1>
+		<div class="team-ml">
+			<h1 class="text-center"><img src="/img/cambodia_ai.jpg" class="img-logo"/>Khmer ML</h1>
+		</div>
 			<div>
-				<h4>Introduction</h4>
+				<h4><u>Introduction</u></h4>
 				To classify a single document, firstly the model is needed to be trained by uploading relevant training data in <i>Training</i>. 
 				After training, we obtain the model, therefore, we can classify the document by clicking <i>Classification</i>. 
 				Then insert texts into the textbox. For detailed explanation please check in <i>Description</i>.
@@ -247,7 +248,7 @@
 								
 								</div>
 								<div style="padding-left: 15px; padding-right: 15px">
-									<h5> Results</h5>
+									<h5><u> Results</u></h5>
 										The results are illustrated in two manners, e.g., predicted results on the testing and training data. 
 										<ol>
 											<li>	<b>Testing data:</b> These data are not involved in training process. 
@@ -258,7 +259,7 @@
 														The model that procuces high accuracy on training data, but performs poorly on testing is overfitted model.   
 											</li>
 										</ol>
-									<h5>CPU Computational time</h5>
+									<h5><u>CPU Computational time</u></h5>
 									Selecting the right machine learning method for specific problem is very important since it can save time and cost. 
 									Normally, we should consider two factors including accuracy and computational time. 
 								</div>

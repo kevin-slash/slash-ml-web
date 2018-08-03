@@ -78,7 +78,7 @@
 	<title itemprop='name'>{{ config('seo_config.defaults._full_title') }}</title>
 @endif
 
-<link href="{{ URL::asset('img/favicon.ico') }}" type="image/x-icon" rel="shortcut icon" />
+<link href="{{ URL::asset('img/cambodia_ai.jpg') }}" type="image/x-icon" rel="shortcut icon" />
 
 {{-- Website Meta Tag --}}
 
